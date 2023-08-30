@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    height: 240px;
+}
+
+.gridElement{
+    border: 0.5px solid black;
+    height: 15px;
+    width: 15px;
+}

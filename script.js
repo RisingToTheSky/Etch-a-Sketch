@@ -1,4 +1,7 @@
 const grid = document.getElementById("grid");
+const eraser = document.getElementById("eraser");
+const clearBoard = document.getElementById("clearBoard");
+const changeGridSize = document.getElementById("changeGridSize");
 /*Create grid*/
 function createGrid(){
     for (let i = 0; i < 16 * 16; i++){

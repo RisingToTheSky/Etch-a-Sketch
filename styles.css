@@ -3,10 +3,10 @@
     margin: 0;
     padding: 0;
 }
+
 main{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 h1{
     display: flex;
@@ -30,4 +30,13 @@ h1{
 .gridElement{
     height: 34.375px;
     width: 34.375px;
+}
+
+.settings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
 }

@@ -1,19 +1,33 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 #container{
-    height: 160.5px;
-    width: 160.5px;
+    height: 550.5px;
+    width: 550.5px;
     border: 0.5px solid black;
 }
 #grid{
     display: flex;
     flex-wrap: wrap;
-    width: 160px;
-    height: 160px;
+    width: 550px;
+    height: 550px;
 }
 
 .gridElement{
-    height: 10px;
-    width: 10px;
+    height: 34.375px;
+    width: 34.375px;
 }

@@ -3,6 +3,8 @@ const eraser = document.getElementById("eraser");
 const gridReset = document.getElementById("reset");
 const container = document.getElementById("container");
 const newGridSize = document.getElementById("changeGridSize");
+const mode = document.getElementById("mode");
+let changeMode = 0;
 let gridSize = 16;
 createGrid(gridSize);
 
@@ -22,12 +24,25 @@ function createGrid(gridSize){
         }
     }
 }
-/*Hovering effect*/
+/*Hovering effect and color mode*/
 grid.addEventListener("mouseover", function (e){
     if (e.target.matches(".gridElement")){
-        e.target.style.backgroundColor = randomColor();
+        e.target.style.backgroundColor =  "black";
     }
 });
+
+mode.addEventListener("click", () => {
+    changeMode = 1
+    if (changeMode === 1){
+        grid.addEventListener("mouseover", function (e){
+            if (e.target.matches(".gridElement")){
+                e.target.style.backgroundColor = randomColor();
+            }
+        });
+    }
+});
+
+
 
 /*Reset button*/
 gridReset.addEventListener("click", () => {

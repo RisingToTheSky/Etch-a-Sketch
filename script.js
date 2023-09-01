@@ -25,18 +25,14 @@ function createGrid(gridSize){
 /*Hovering effect*/
 grid.addEventListener("mouseover", function (e){
     if (e.target.matches(".gridElement")){
-        e.target.classList.add("active");
+        e.target.style.backgroundColor = randomColor();
     }
 });
 
 /*Reset button*/
 gridReset.addEventListener("click", () => {
     grid.innerHTML =""
-    if (gridSize === 16){
-        createGrid(16);
-    }else{
-        createGrid(gridSize);
-    }
+    createGrid(gridSize)
 });
 
 /*Change grid size button*/
@@ -54,6 +50,14 @@ function changeGridSize (gridSize){
     }
 }
 
+/*Change color*/
+function randomColor(){
+    let maxVal = 0xFFFFFF;
+    let randomNumber = Math.random() * maxVal;
+    randomNumber = Math.floor(randomNumber).toString(16);
+    let randColor = randomNumber.padStart(6, 0);
+    return `#${randColor.toUpperCase()}`;
+}
 
 
 

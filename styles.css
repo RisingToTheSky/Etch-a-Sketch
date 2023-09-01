@@ -5,9 +5,13 @@
 }
 
 main{
+    padding-top: 100px;
+    padding-left: 50px;
+    gap: 100px;
     display: flex;
     justify-content: center;
 }
+
 h1{
     display: flex;
     justify-content: center;
@@ -19,6 +23,7 @@ h1{
     height: 550.5px;
     width: 550.5px;
     border: 0.5px solid black;
+    box-shadow: 5px 5px 20px lightgrey;
 }
 #grid{
     display: flex;
@@ -30,10 +35,13 @@ h1{
 .gridElement.active{
     background-color: black;
 }
+h2{
+    align-self: center;
+}
 .settings{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 ul{
     list-style-type: none;

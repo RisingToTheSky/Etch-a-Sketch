@@ -13,6 +13,13 @@ function createSquare(size) {
     return gridElement;
   }
 
+function createGrid(gridSize){
+    for (let i = 0; i < gridSize; i++) {
+        for (let j = 0; j < gridSize; j++) {
+            grid.appendChild(createSquare(grid.clientWidth / gridSize));
+        }
+    }
+}
 
 gridReset.addEventListener("click", () => {
     grid.innerHTML =""

@@ -5,6 +5,7 @@ const container = document.getElementById("container");
 const newGridSize = document.getElementById("changeGridSize");
 let gridSize = 16;
 createGrid(gridSize);
+
 /*Create grid*/
 function createSquare(size) {
     const gridElement = document.createElement('div');
@@ -27,6 +28,7 @@ grid.addEventListener("mouseover", function (e){
         e.target.classList.add("active");
     }
 });
+
 /*Reset button*/
 gridReset.addEventListener("click", () => {
     grid.innerHTML =""
@@ -37,6 +39,7 @@ gridReset.addEventListener("click", () => {
     }
 });
 
+/*Change grid size button*/
 newGridSize.addEventListener("click", () =>{
     grid.innerHTML = ""
     changeGridSize(gridSize);
@@ -50,6 +53,8 @@ function changeGridSize (gridSize){
         alert("Invalid input");
     }
 }
+
+
 
 
 

@@ -27,11 +27,9 @@ h1{
     height: 550px;
 }
 
-.gridElement{
-    height: 34.375px;
-    width: 34.375px;
+.gridElement.active{
+    background-color: black;
 }
-
 .settings{
     display: flex;
     flex-direction: column;

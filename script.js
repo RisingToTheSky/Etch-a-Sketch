@@ -3,8 +3,8 @@ const eraser = document.getElementById("eraser");
 const gridReset = document.getElementById("reset");
 const container = document.getElementById("container");
 const newGridSize = document.getElementById("changeGridSize");
-const mode = document.getElementById("mode");
-let changeMode = 0;
+const colorMode = document.getElementById("color-mode");
+const blackMode = document.getElementById("black-mode");
 let gridSize = 16;
 createGrid(gridSize);
 
@@ -31,8 +31,20 @@ grid.addEventListener("mouseover", function (e){
     }
 });
 
-mode.addEventListener("click", () => {
-    changeMode = 1
+blackMode.addEventListener("click", () => {
+    let changeMode = 0;
+    if (changeMode === 0){
+        grid.addEventListener("mouseover", function (e){
+            if (e.target.matches(".gridElement")){
+                e.target.style.backgroundColor =  "black";
+            }
+        });
+    }
+})
+
+
+colorMode.addEventListener("click", () => {
+    let changeMode = 1;
     if (changeMode === 1){
         grid.addEventListener("mouseover", function (e){
             if (e.target.matches(".gridElement")){
@@ -73,6 +85,7 @@ function randomColor(){
     let randColor = randomNumber.padStart(6, 0);
     return `#${randColor.toUpperCase()}`;
 }
+
 
 
 

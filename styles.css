@@ -35,14 +35,38 @@ h1{
 .gridElement.active{
     background-color: black;
 }
-h2{
-    align-self: center;
+
+#reset, #changeGridSize, #black-mode, #color-mode{
+    width: 100%;
 }
 .settings{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+button{
+    border: none;
+    color: rgb(82, 79, 79);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+
+button:hover{
+    cursor: pointer;
+}
+
 ul{
     list-style-type: none;
 }

@@ -74,6 +74,7 @@ function changeGridSize (gridSize){
         createGrid(gridSize);
     }else{
         alert("Invalid input");
+        createGrid(16);
     }
 }
 
